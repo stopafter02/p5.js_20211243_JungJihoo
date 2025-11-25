@@ -6,62 +6,75 @@
     <title>나의 p5.js 과제 모음</title>
     <style>
         body {
-            font-family: sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+            background-color: #f4f4f4;
+            margin: 0;
             padding: 20px;
-        }
-        h1 { margin-bottom: 30px; }
-        
-        /* 그리드 레이아웃 설정 (2열 배치) */
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 화면을 반반 나눔 */
-            gap: 20px; /* 간격 */
-            max-width: 1200px;
-            margin: 0 auto;
+            text-align: center;
         }
 
-        /* 각 과제 박스 스타일 */
+        h1 { margin-bottom: 20px; }
+
+        /* 4분할 그리드 레이아웃 (田 모양) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 가로를 1:1로 정확히 나눔 */
+            gap: 10px; /* 과제 사이의 간격 (좁게 설정) */
+            
+            /* 전체 폭 제한 (너무 넓어지지 않게) */
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        /* 각 과제 박스 디자인 */
         .item {
             background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden; /* 박스 밖으로 튀어나오는 것 자르기 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        h2 { font-size: 1.2em; color: #333; }
+        .item h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
 
-        /* iframe: 다른 html을 불러오는 창 */
+        /* 아이프레임 (p5.js 화면) 설정 */
         iframe {
-            width: 100%;
-            height: 400px; /* 캔버스 크기에 맞춰 조절 가능 */
+            /* ★★★ 중요: 여기 숫자를 본인 p5.js 캔버스 크기에 맞춰주세요 ★★★ */
+            width: 100%;      /* 폭은 박스에 맞춤 */
+            height: 400px;    /* 기본 높이 400px (필요하면 600px 등으로 수정) */
+            
             border: none;
-            overflow: hidden;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <h1>My p5.js Assignments</h1>
+    <h1>P5.js 과제 포트폴리오</h1>
 
-    <div class="container">
+    <div class="grid-container">
         <div class="item">
-            <h2>과제 1</h2>
-            <iframe src="./hw1/index.html"></iframe>
+            <h2>과제 #1</h2>
+            <iframe src="./hw1/index.html" scrolling="no"></iframe>
         </div>
         <div class="item">
-            <h2>과제 4</h2>
-            <iframe src="./hw4/index.html"></iframe>
+            <h2>과제 #4</h2>
+            <iframe src="./hw4/index.html" scrolling="no"></iframe>
         </div>
 
         <div class="item">
-            <h2>과제 2</h2>
-            <iframe src="./hw2/index.html"></iframe>
+            <h2>과제 #2</h2>
+            <iframe src="./hw2/index.html" scrolling="no"></iframe>
         </div>
         <div class="item">
-            <h2>과제 3</h2>
-            <iframe src="./hw3/index.html"></iframe>
+            <h2>과제 #3</h2>
+            <iframe src="./hw3/index.html" scrolling="no"></iframe>
         </div>
     </div>
 
