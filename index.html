@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 p5.js 과제 모음</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 { margin-bottom: 30px; }
+        
+        /* 그리드 레이아웃 설정 (2열 배치) */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 화면을 반반 나눔 */
+            gap: 20px; /* 간격 */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 각 과제 박스 스타일 */
+        .item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 { font-size: 1.2em; color: #333; }
+
+        /* iframe: 다른 html을 불러오는 창 */
+        iframe {
+            width: 100%;
+            height: 400px; /* 캔버스 크기에 맞춰 조절 가능 */
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My p5.js Assignments</h1>
+
+    <div class="container">
+        <div class="item">
+            <h2>과제 1</h2>
+            <iframe src="./hw1/index.html"></iframe>
+        </div>
+        <div class="item">
+            <h2>과제 4</h2>
+            <iframe src="./hw4/index.html"></iframe>
+        </div>
+
+        <div class="item">
+            <h2>과제 2</h2>
+            <iframe src="./hw2/index.html"></iframe>
+        </div>
+        <div class="item">
+            <h2>과제 3</h2>
+            <iframe src="./hw3/index.html"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
